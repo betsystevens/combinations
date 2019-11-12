@@ -1,5 +1,5 @@
 const assert = require('assert');
-const facts = require('./facts.js');
+const facts = require('./factorials.js');
 
 // tests for getFactorial()
 
