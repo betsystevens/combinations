@@ -51,13 +51,13 @@ const getPartialPerm = (n, k) => {
  *  k-permutations of n 
  *  Order matters 
  *  Permutation but only with k chosen, ie. partial
+ *  Edge cases: (0,0), (1,0), (0,1) => 1  // all return 1
+ *              (4,6) => (4,4)  // for k > n, compute (n,n)
  * 
  *  Example problem: you have 6 people to choose from and 4 chairs
  *  How many ways can you seat 4 of the people?
  *  n = 6, k = 4
  *  Answer: 6*5*4*3 = 360
- *  Edge cases: (0,0), (1,0), (0,1) => 1
- *              (4,6) => (4,4)  // k > n => (n,n)
  */
 const partialPerm = (n, k) => {
   if ((k === 0) || (n === 0) || (n === 1)) {
