@@ -54,9 +54,9 @@ const getPartialPerm = (n, k) => {
  *  Edge cases: (0,0), (1,0), (0,1) => 1  // all return 1
  *              (4,6) => (4,4)  // for k > n, compute (n,n)
  * 
- *  Example problem: you have 6 people to choose from and 4 chairs
- *  How many ways can you seat 4 of the people?
- *  n = 6, k = 4
+ *  Example problem: You have 6 people to choose from and 4 chairs
+ *    How many ways can you seat 4 of the people? Order matters.
+ *    n = 6, k = 4
  *  Answer: 6*5*4*3 = 360
  */
 const partialPerm = (n, k) => {
@@ -68,16 +68,22 @@ const partialPerm = (n, k) => {
   }
 }
 /**
- *  combination 
- *  n choose k items 
+ *  combination, n choose k items 
  *  @param    n     positive integer
  *  @param    k     positive integer
  *  @return   n choose k  
- * 
- *  binomial coefficient
- *  defined for k <= n
+ *
+ *  Order does not matter
+ *  Binomial Coefficient
  *  n! / (n - k)! k!
+ *  defined for k <= n
  * 
+ *  Example problem: You have 6 people to choose from 
+ *    and an elevator that holds 4 people. 
+ *    How many ways can you choose 4 people? 
+ *    Order does not matter. 
+ *    n = 6, k = 4
+ *  Answer: 6! / 2! * 4! =  6*5*4*3 / 4*3*2*1 = 15 
  */
 const combination = (n, k) => {
   if ( (isNatural(n)) && (isNatural(k)) && (k <= n) ){
