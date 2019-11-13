@@ -11,12 +11,12 @@
 * Mocha is used for testing 
 
 ## Using the Modules 
-- **factorials.js** - modules check for valid input, positive integers.
-  - getFactorial(n)
+- **factorials.js** - modules check input is positive integers and 0.
+  - getFactorial (n)
     - returns n! for valid n
-  - getPartialPerm(n,k)
+  - getPartialPerm (n, k)
     - returns partial permutation for valid n, k
-  - combination(n,k)
+  - combination (n, k)
     - returns n choose k for valid n,k
 
   ```
@@ -38,8 +38,8 @@
   x = facts.getPartialPerm(5, 3);   // x = 60
   x = facts.combination(5, 3);      // x = 10
   ```
-- **useFactorials.js** - example using the library 
-  - from command line
+- **useFactorials.js** - example code to use the library 
+  - run from the command line with input
   ```
   $ node useFactorials.js 5 3
   ```
